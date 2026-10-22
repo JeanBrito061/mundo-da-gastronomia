@@ -2,7 +2,7 @@
 
 Aplicativo em React Native (Expo) sobre gastronomia, com lista de pratos, tela de detalhes e formulário de avaliação.
 
-**Autora:** Jean de Almeida Brito , Análise e Desenvolvimento de Sistemas, CEUB
+**Autor:** Jean de Almeida Brito , Análise e Desenvolvimento de Sistemas, CEUB
 
 ## Telas
 
