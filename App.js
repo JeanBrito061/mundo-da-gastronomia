@@ -1,4 +1,3 @@
-// App.js — Mundo da Gastronomia
 import React, { useState } from 'react';
 import {
   SafeAreaView,
@@ -22,14 +21,11 @@ import Slider from '@react-native-community/slider';
 // -------------------------------------------------------------
 // DADOS
 // -------------------------------------------------------------
-// URL das imagens
 const img = (id, w = 600) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
-// Banner
 const BANNER = img('photo-1504674900247-0877df9cc836', 900);
 
-// Itens
 const PRATOS = [
   {
     id: '1',
@@ -127,7 +123,6 @@ const PRATOS = [
 // COMPONENTES REUTILIZÁVEIS
 // -------------------------------------------------------------
 
-// Cabeçalho
 function Cabecalho({ titulo, onVoltar }) {
   return (
     <View style={styles.header}>
@@ -141,7 +136,6 @@ function Cabecalho({ titulo, onVoltar }) {
   );
 }
 
-// Card
 function ItemCard({ imagem, titulo, subtitulo, onPress }) {
   return (
     <TouchableOpacity style={styles.itemCard} onPress={onPress} activeOpacity={0.7}>
@@ -159,7 +153,6 @@ function ItemCard({ imagem, titulo, subtitulo, onPress }) {
 // PARTE 1 — Lista
 // -------------------------------------------------------------
 function TelaLista({ onAbrirPrato, onAbrirForm }) {
-  // Topo da lista
   const Topo = (
     <View>
       <Image source={{ uri: BANNER }} style={styles.banner} />
@@ -232,22 +225,18 @@ function TelaDetalhe({ prato }) {
 // PARTE 3 — Formulário
 // -------------------------------------------------------------
 function TelaFormulario() {
-  // Campos de texto
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [cidade, setCidade] = useState('');
   const [comentario, setComentario] = useState('');
-  // Pickers
   const [pratoFavorito, setPratoFavorito] = useState('pizza');
   const [refeicao, setRefeicao] = useState('almoco');
-  // Sliders
   const [nota, setNota] = useState(5);
   const [orcamento, setOrcamento] = useState(50);
-  // Switches
   const [vegetariano, setVegetariano] = useState(false);
   const [newsletter, setNewsletter] = useState(true);
 
-  // Enviar
+
   const enviar = () => {
     Alert.alert(
       'Resumo da avaliação',
@@ -264,7 +253,7 @@ function TelaFormulario() {
     );
   };
 
-  // Limpar
+
   const limpar = () => {
     setNome('');
     setEmail('');
@@ -390,7 +379,7 @@ function TelaFormulario() {
 // APP
 // -------------------------------------------------------------
 export default function App() {
-  const [tela, setTela] = useState('home'); // 'home' | 'detalhe' | 'form'
+  const [tela, setTela] = useState('home'); 
   const [pratoSelecionado, setPratoSelecionado] = useState(null);
 
   const voltar = () => setTela('home');
@@ -442,7 +431,7 @@ const styles = StyleSheet.create({
   },
   conteudo: { padding: 12, paddingBottom: 32 },
 
-  // Cabeçalho
+
   header: {
     height: 56,
     flexDirection: 'row',
@@ -456,7 +445,7 @@ const styles = StyleSheet.create({
   headerSeta: { fontSize: 24, color: '#222' },
   headerTitulo: { fontSize: 18, fontWeight: '600', color: '#222' },
 
-  // Lista
+  
   banner: { width: '100%', height: 180, borderRadius: 12, backgroundColor: '#ddd' },
   bannerTexto: { fontSize: 14, color: '#555', marginTop: 8 },
   botaoForm: {
@@ -469,7 +458,7 @@ const styles = StyleSheet.create({
   botaoFormTexto: { color: '#fff', fontWeight: '600', fontSize: 15 },
   secaoTitulo: { fontSize: 22, color: '#222', marginTop: 16, marginBottom: 8 },
 
-  // Card
+  
   itemCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -487,7 +476,7 @@ const styles = StyleSheet.create({
   itemSubtitulo: { fontSize: 13, color: '#555', marginTop: 4 },
   itemSeta: { fontSize: 28, color: '#444', paddingHorizontal: 6 },
 
-  // Detalhes
+
   card: {
     backgroundColor: '#fff',
     borderWidth: 1,
@@ -510,7 +499,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 
-  // Formulário
+ 
   formTitulo: { fontSize: 20, fontWeight: '700', color: '#222', marginBottom: 8 },
   rotulo: { fontSize: 14, color: '#444', marginTop: 12, marginBottom: 4 },
   input: {
