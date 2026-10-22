@@ -2,7 +2,7 @@
 
 Aplicativo em React Native (Expo) sobre gastronomia, com lista de pratos, tela de detalhes e formulário de avaliação.
 
-**Autor:** Jean de Almeida Brito , Análise e Desenvolvimento de Sistemas, CEUB
+**Autor:** Jean de Almeida Brito, Análise e Desenvolvimento de Sistemas, CEUB
 
 ## Telas
 
@@ -31,7 +31,9 @@ O app tem 3 telas, alternadas por estado (`useState`) no `App.js`:
 
 ## Como executar
 
-1. Abrir o projeto no [Expo Snack](https://snack.expo.dev) com o **Expo SDK 54** selecionado.
+**Link do projeto no Snack:** https://snack.expo.dev/@jeanbrito061/mundo-da-gastronomia
+
+1. Abrir o projeto no Snack pelo link acima, com o **Expo SDK 54** selecionado.
 2. Conferir se o `package.json` tem as duas dependências nas versões indicadas acima.
 3. Executar na aba **Web** do Snack.
 
