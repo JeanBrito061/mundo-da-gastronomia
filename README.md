@@ -37,6 +37,26 @@ O app tem 3 telas, alternadas por estado (`useState`) no `App.js`:
 2. Conferir se o `package.json` tem as duas dependências nas versões indicadas acima.
 3. Executar na aba **Web** do Snack.
 
+## Teste em diferentes tamanhos de tela
+
+O app foi conferido na aba **Web** do Snack em três larguras:
+
+| Dispositivo simulado | Largura | Resultado |
+|---|---|---|
+| Celular pequeno (ex.: iPhone SE) | 320px | ✅ Layout ajustado, sem cortes |
+| Celular comum (ex.: iPhone 12, Pixel) | 375px | ✅ Layout ajustado, sem cortes |
+| Tablet | 768px | ✅ Banner e cards ocupam a largura corretamente |
+
+As três telas (Lista, Detalhes e Formulário) foram navegadas na menor largura, e todos os elementos ficaram visíveis e funcionando.
+
+### Como testar com o Responsive Viewer
+
+1. Abrir o projeto no Snack pelo link acima e selecionar a aba **Web** na pré-visualização.
+2. Clicar no ícone **↗**, ao lado de "Web", para abrir o app numa janela própria.
+3. Usar a extensão **Responsive Viewer** do Chrome para visualizar o app em vários tamanhos de tela ao mesmo tempo.
+
+Obs.: a janela aberta pelo ↗ depende da aba do Snack para carregar o app. Por isso, a aba do Snack precisa continuar aberta durante o teste. Se o endereço dessa janela for copiado para uma aba nova, a página fica parada em "Connecting...". Nesse caso, também é possível testar redimensionando a própria janela até a largura de um celular.
+
 ## ⚠️ Observação sobre execução em dispositivo físico
 
 O projeto funciona normalmente na aba **Web** do Snack. Em um dispositivo físico (aba **My Device**, com o Expo Go), ele **não abre** por uma incompatibilidade de versões que não tem relação com o código:
